@@ -1,0 +1,53 @@
+#Frontend{
+    background-color: aqua;
+    border-color: black;
+    border-style: solid;
+
+}
+#Backend{
+    background-color: aquamarine;
+    border-color: black;
+    border-style: solid;
+}
+#UX{
+    background-color: blueviolet;
+    border-color: black;
+    border-style: solid;
+}
+#toDo{
+   display: table;
+   float: left;
+   background-color: gray;
+   margin-top: auto;
+   border-color: black;
+   border-style: solid;
+   width:30%;
+   text-align: center;   
+}
+#inProgress{
+    display: table;
+    background-color: gray;
+    width:30%;
+    border-color: black;
+    border-style: solid;
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+ }
+#done{
+    display: table;
+    float: right;
+    background-color: gray;
+    width:30%;
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+}
+
+    #addToDo{
+        margin-bottom: 40px;
+        margin-left: 38%;
+        margin-right: 38%;
+    }
+    button{margin-bottom: 20px;}
