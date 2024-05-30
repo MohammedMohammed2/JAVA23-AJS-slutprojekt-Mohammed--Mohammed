@@ -13,13 +13,17 @@ function AddToDoList() {
         const category = document.getElementById('category').value;
         const assignment = document.getElementById('input').value;
         const status = 'toDo';
+        
 
         const newAssignmentID = push(assignmentsRef).key;
         const newAssignment = {};
         newAssignment[newAssignmentID] = { status, assignment, category }
         console.log(newAssignment);
 
+
         update(assignmentsRef, newAssignment)
+
+        event.target.reset();
         
 
     }

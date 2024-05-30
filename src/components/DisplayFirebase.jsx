@@ -34,7 +34,7 @@ function DisplayFirebase() {
     return (
         <div>
             <AddToDoList />
-            <h1>{error}</h1>
+            <h1 id="error">{error}</h1>
             <div id="wraper">
                 <div id="toDo">
                     <h1>ToDo</h1>
