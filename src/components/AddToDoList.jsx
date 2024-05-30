@@ -1,14 +1,14 @@
 import { ref, push, update } from "firebase/database";
-import { db } from "../utils/firebaseConfig";
+import { assignmentsRef } from "../utils/firebaseConfig";
 
 
 
 function AddToDoList() {
-    
+
 //function that adds a todo assignment 
     function handleSubmit(event) {
         event.preventDefault();
-        const assignmentsRef = ref(db, 'assignments');
+        
 
         const category = document.getElementById('category').value;
         const assignment = document.getElementById('input').value;
@@ -24,7 +24,6 @@ function AddToDoList() {
         update(assignmentsRef, newAssignment)
 
         event.target.reset();
-        
 
     }
 
