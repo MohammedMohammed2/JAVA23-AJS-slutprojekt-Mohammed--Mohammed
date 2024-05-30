@@ -31,13 +31,12 @@ function DisplayFirebase() {
     }, [])
 
     if (error == 'true') {
-        return (<div><h1>something went wrong try again later</h1></div>);
+        return (<div id="error"><h1>something went wrong try again later</h1></div>);
     }
     else {
         return (
             <div>
                 <AddToDoList />
-                <h1 id="error">{error}</h1>
                 <div id="wraper">
                     <div id="toDo">
                         <h1>ToDo</h1>

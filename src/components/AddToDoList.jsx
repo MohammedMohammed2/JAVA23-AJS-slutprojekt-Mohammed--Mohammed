@@ -21,7 +21,7 @@ function AddToDoList() {
         console.log(newAssignment);
 
 
-        update(assignmentsRef, newAssignment)
+        update(assignmentsRef, newAssignment).then(()=>{alert ('The assignment' + " " + assignment +" has been added")})
 
         event.target.reset();
 
