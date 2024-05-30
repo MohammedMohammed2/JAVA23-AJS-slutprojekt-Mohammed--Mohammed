@@ -14,6 +14,8 @@ function InProgressCard({ todo }) {
         const newStatus = status;
         update(updateRef, {status: newStatus});
 
+        alert("The assginment:" + " "+ todo.assignment + " " + "is completed")
+
     }
 
     if (todo.status == 'in Progress') {

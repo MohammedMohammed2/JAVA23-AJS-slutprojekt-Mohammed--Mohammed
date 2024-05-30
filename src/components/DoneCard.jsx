@@ -9,6 +9,8 @@ function DoneCard({ todo }) {
         const firebaseID = todo.id;
         const userToRemoveRef = ref(db, 'assignments/' + firebaseID);
         remove(userToRemoveRef);
+
+        alert("The assginment:"+" " + todo.assignment + " "+ "has been removed")
     }
 
     if (todo.status == 'Done') {

@@ -18,6 +18,7 @@ function ToDoCard({ todo }) {
             status: 'in Progress'
         });
 
+        alert(devName+ " "+ "has been assgined to"+ " " + todo.assignment)
     }
 
     if (todo.status == 'toDo') {
