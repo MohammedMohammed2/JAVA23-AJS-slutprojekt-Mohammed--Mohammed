@@ -4,17 +4,17 @@ import { db } from "../utils/firebaseConfig";
 
 function InProgressCard({ todo }) {
 
-//moves an assignment from in progress into done
-    function handleSubmit(event){
+    //moves an assignment from in progress into done
+    function handleSubmit(event) {
         event.preventDefault();
-        const status = 'Done';
 
         const updateRef = ref(db, 'assignments/' + todo.id);
-    
-        const newStatus = status;
-        update(updateRef, {status: newStatus});
+        const newStatus = 'Done';
 
-        alert("The assginment:" + " "+ todo.assignment + " " + "is completed")
+
+
+        update(updateRef, { status: newStatus })
+        .then(() => { alert("The assginment:" + " " + todo.assignment + " " + "has been completed") })
 
     }
 
