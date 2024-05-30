@@ -32,7 +32,7 @@ function AddToDoList() {
         <div id="addToDo">
             <h1>Scum Board</h1>
             <form onSubmit={handleSubmit}>
-                <input type="text" placeholder="task" id="input" required/>
+                <input type="text" placeholder="task" pattern="[a-zäöåA-ZÄÖÅ ]*" id="input" required/>
                 <select id="category">
                     <option value="Frontend">Frontend</option>
                     <option value="Backend">Backend</option>

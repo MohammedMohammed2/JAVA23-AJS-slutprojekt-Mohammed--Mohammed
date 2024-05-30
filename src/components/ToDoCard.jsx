@@ -25,7 +25,7 @@ function ToDoCard({ todo }) {
             <form onSubmit={handleSubmit} id={todo.category}>
                 <h2>{todo.assignment}</h2>
                 <h3>{todo.category}</h3>
-                <input id={todo.id} type="text" placeholder="EnterName" required />
+                <input id={todo.id} type="text" pattern="[a-zäöåA-ZÄÖÅ ]*" placeholder="EnterName" required />
                 <button>Add</button>
             </form>);
     }
