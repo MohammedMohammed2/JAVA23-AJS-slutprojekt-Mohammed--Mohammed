@@ -16,9 +16,9 @@ function ToDoCard({ todo }) {
         update(updateRef, {
             assigned: assignDev,
             status: 'in Progress'
-        });
+        }).then(()=>{ alert(devName+ " "+ "has been assgined to"+ " " + todo.assignment)});
 
-        alert(devName+ " "+ "has been assgined to"+ " " + todo.assignment)
+       
     }
 
     if (todo.status == 'toDo') {
