@@ -10,8 +10,8 @@ function AddToDoList() {
         event.preventDefault();
         
 
-        const category = document.getElementById('category').value;
-        const assignment = document.getElementById('input').value;
+        const category = event.target.category.value;
+        const assignment = event.target.assignment.value;
         const status = 'toDo';
         
 
@@ -21,8 +21,7 @@ function AddToDoList() {
         console.log(newAssignment);
 
 
-        update(assignmentsRef, newAssignment).then(()=>{alert ('The assignment' + " " + assignment +" has been added")})
-
+        update(assignmentsRef, newAssignment).then(()=>{alert ('The assignment' + " " + assignment +" has been added")});
         event.target.reset();
 
     }
@@ -31,7 +30,7 @@ function AddToDoList() {
         <div id="addToDo">
             <h1>Scum Board</h1>
             <form onSubmit={handleSubmit}>
-                <input type="text" placeholder="task" pattern="[a-zäöåA-ZÄÖÅ ]*" id="input" required/>
+                <input type="text" placeholder="task" pattern="[a-zäöåA-ZÄÖÅ ]*" id="assignment" required/>
                 <select id="category">
                     <option value="Frontend">Frontend</option>
                     <option value="Backend">Backend</option>

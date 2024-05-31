@@ -18,7 +18,7 @@ function DisplayFirebase() {
         onValue(assignmentsRef, (snapshot => {
             try {
                 const toDosArray = Object.entries(snapshot.val())
-                    .map(([id, data]) => ({
+                   .map(([id, data]) => ({
                         id,
                         ...data,
                     }));

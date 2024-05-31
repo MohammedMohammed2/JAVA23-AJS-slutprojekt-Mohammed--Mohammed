@@ -9,7 +9,7 @@ function ToDoCard({ todo }) {
         event.preventDefault();
 
         const updateRef = ref(db, 'assignments/' + todo.id);
-        const devName = document.getElementById(todo.id).value;
+        const devName = event.target.input.value;
         console.log(devName)
 
         const assignDev = devName;
@@ -26,7 +26,7 @@ function ToDoCard({ todo }) {
             <form onSubmit={handleSubmit} id={todo.category}>
                 <h2>{todo.assignment}</h2>
                 <h3>{todo.category}</h3>
-                <input id={todo.id} type="text" pattern="[a-zäöåA-ZÄÖÅ ]*" placeholder="EnterName" required />
+                <input id="input" type="text" pattern="[a-zäöåA-ZÄÖÅ ]*" placeholder="EnterName" required />
                 <button>Add</button>
             </form>);
     }
